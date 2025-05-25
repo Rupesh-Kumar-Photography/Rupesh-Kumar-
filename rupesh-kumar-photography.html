@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupesh Kumar - Professional Photographer & Videographer</title>
+    <meta name="description" content="Professional photography and videography services by Rupesh Kumar. Specializing in weddings, portraits, events, and commercial photography with 8+ years of experience.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .golden-text {
+            background: linear-gradient(135deg, #FFD700 0%, #F4C430 50%, #DAA520 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .golden-shadow {
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .hover-gold {
+            transition: all 0.3s ease;
+        }
+
+        .hover-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #FFD700 0%, #F4C430 50%, #DAA520 100%);
+        }
+
+        .bg-dark-gradient {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background: rgba(26, 26, 26, 0.8);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), 
+                        url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080') center/cover;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #FFD700 0%, #F4C430 50%, #DAA520 100%);
+            color: #1a1a1a;
+        }
+
+        .btn-secondary {
+            border: 2px solid #FFD700;
+            color: #FFD700;
+            background: transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: #262626;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 1rem;
+            border: 4px solid #FFD700;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .camera-icon {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            background: linear-gradient(135deg, #FFD700 0%, #F4C430 50%, #DAA520 100%);
+            padding: 1rem;
+            border-radius: 1rem;
+            color: #1a1a1a;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .stat-label {
+            color: #999;
+            margin-top: 0.5rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 5rem 0;
+            background: #1a1a1a;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid #FFD700;
+            background: transparent;
+            color: #FFD700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: linear-gradient(135deg, #FFD700 0%, #F4C430 50%, #DAA520 100%);
+            color: #1a1a1a;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 26, 26, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-info {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-info {
+            opacity: 1;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 0;
+            background: #1a1a1a;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid #FFD700;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #FFD700 0%, #F4C430 50%, #DAA520 100%);
+            color: #1a1a1a;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .pricing-icon {
+            margin-bottom: 1rem;
+            color: #FFD700;
+        }
+
+        .pricing-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+            margin: 1rem 0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            color: #ccc;
+        }
+
+        .pricing-features li:before {
+            content: "✓";
+            color: #FFD700;
+            margin-right: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: #262626;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #FFD700;
+            background: #333;
+            color: white;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #F4C430;
+            box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: rgba(26, 26, 26, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .social-links .whatsapp {
+            grid-column: 1 / -1;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .social-link.facebook {
+            background: #1877f2;
+        }
+
+        .social-link.whatsapp {
+            background: #25d366;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            border-top: 1px solid #FFD700;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .footer-social a {
+            color: #999;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #FFD700;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+                color: white;
+                cursor: pointer;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .made-with-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #4e65ff 0%, #6e8ffb 100%);
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(78, 101, 255, 0.3);
+        }
+        
+        .heart-icon {
+            display: inline-block;
+            margin-left: 4px;
+            color: #ff3c3c;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            15% { transform: scale(1.2); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.2); }
+            60% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-logo font-playfair golden-text">Rupesh Kumar</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="font-playfair golden-text golden-shadow">Rupesh Kumar</h1>
+            <p>Professional Photographer & Videographer capturing life's most precious moments with artistic excellence</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn btn-secondary">Book Session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="data:image/jpeg;base64,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" alt="Rupesh Kumar Professional Portrait" class="w-full max-w-md mx-auto" />
+                    <div class="camera-icon">
+                        <i data-lucide="camera" width="32" height="32"></i>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="section-title font-playfair golden-text">About Me</h2>
+                    <p class="mb-6 text-gray-300">With years of experience in professional photography and videography, I specialize in capturing the essence of life's most important moments. From intimate weddings to corporate events, my artistic vision brings stories to life through the lens.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Photo Shoots</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Video Shoots</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title font-playfair golden-text">Portfolio</h2>
+            <p class="section-subtitle">Explore my collection of professional photography and videography work across various categories</p>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Wedding</button>
+                <button class="filter-btn" data-filter="portrait">Portrait</button>
+                <button class="filter-btn" data-filter="event">Event</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title font-playfair golden-text">Pricing Packages</h2>
+            <p class="section-subtitle">Professional photography and videography packages tailored to your needs</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <i data-lucide="camera" width="40" height="40"></i>
+                    </div>
+                    <h3 class="font-playfair">Portrait Session</h3>
+                    <div class="pricing-price">₹5,000</div>
+                    <div class="text-gray-400">per session</div>
+                    <ul class="pricing-features">
+                        <li>1-2 hour session</li>
+                        <li>50+ edited photos</li>
+                        <li>Online gallery</li>
+                        <li>High-resolution files</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="pricing-icon">
+                        <i data-lucide="heart" width="40" height="40"></i>
+                    </div>
+                    <h3 class="font-playfair">Wedding Package</h3>
+                    <div class="pricing-price">₹50,000</div>
+                    <div class="text-gray-400">full day</div>
+                    <ul class="pricing-features">
+                        <li>8-10 hour coverage</li>
+                        <li>500+ edited photos</li>
+                        <li>Wedding album</li>
+                        <li>Engagement session</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <i data-lucide="video" width="40" height="40"></i>
+                    </div>
+                    <h3 class="font-playfair">Video Package</h3>
+                    <div class="pricing-price">₹25,000</div>
+                    <div class="text-gray-400">per project</div>
+                    <ul class="pricing-features">
+                        <li>4-6 hour filming</li>
+                        <li>Highlight reel (3-5 min)</li>
+                        <li>Full ceremony footage</li>
+                        <li>Professional editing</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title font-playfair golden-text">Get In Touch</h2>
+            <p class="section-subtitle">Ready to capture your special moments? Let's discuss your photography and videography needs</p>
+            
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3 class="font-playfair mb-6">Send Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name *" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email *" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select name="service" class="form-control" required>
+                                <option value="">Select Service *</option>
+                                <option value="portrait">Portrait Photography</option>
+                                <option value="wedding">Wedding Photography</option>
+                                <option value="event">Event Photography</option>
+                                <option value="video">Video Production</option>
+                                <option value="commercial">Commercial Photography</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message *" rows="4" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3 class="font-playfair mb-4">Contact Information</h3>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <i data-lucide="phone" width="20" height="20" style="color: #FFD700; margin-right: 1rem;"></i>
+                            <span>+91 74152 97122</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <i data-lucide="mail" width="20" height="20" style="color: #FFD700; margin-right: 1rem;"></i>
+                            <span>rupesh@photography.com</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i data-lucide="map-pin" width="20" height="20" style="color: #FFD700; margin-right: 1rem;"></i>
+                            <span>Mumbai, Maharashtra, India</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3 class="font-playfair mb-4">Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/rk_vlogs92?igsh=MTZ3M3NnNDk3eXNldw==" target="_blank" rel="noopener noreferrer" class="social-link instagram">
+                                <i data-lucide="instagram" width="20" height="20" style="margin-right: 0.5rem;"></i>
+                                Instagram
+                            </a>
+                            <a href="https://www.facebook.com/share/1AfmfVZCoQ/" target="_blank" rel="noopener noreferrer" class="social-link facebook">
+                                <i data-lucide="facebook" width="20" height="20" style="margin-right: 0.5rem;"></i>
+                                Facebook
+                            </a>
+                            <a href="https://wa.me/917415297122" class="social-link whatsapp">
+                                <i data-lucide="message-circle" width="20" height="20" style="margin-right: 0.5rem;"></i>
+                                WhatsApp: +91 74152 97122
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3 class="font-playfair mb-4">Why Choose Me</h3>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                            <span>Client Satisfaction</span>
+                            <span class="golden-text" style="font-weight: bold;">99%</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                            <span>Projects Completed</span>
+                            <span class="golden-text" style="font-weight: bold;">700+</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Response Time</span>
+                            <span class="golden-text" style="font-weight: bold;">&lt; 2 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3 class="font-playfair golden-text" style="font-size: 1.8rem; margin-bottom: 1rem;">Rupesh Kumar</h3>
+            <p style="color: #999; margin-bottom: 1.5rem;">Professional Photographer & Videographer</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/rk_vlogs92?igsh=MTZ3M3NnNDk3eXNldw==" target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="instagram" width="24" height="24"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1AfmfVZCoQ/" target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="facebook" width="24" height="24"></i>
+                </a>
+                <a href="https://wa.me/917415297122">
+                    <i data-lucide="message-circle" width="24" height="24"></i>
+                </a>
+                <a href="#">
+                    <i data-lucide="youtube" width="24" height="24"></i>
+                </a>
+            </div>
+            <div style="border-top: 1px solid #333; padding-top: 2rem; margin-top: 2rem;">
+                <p style="color: #666;">© 2024 Rupesh Kumar Photography. All rights reserved.</p>
+                <div style="display: flex; justify-content: center; margin-top: 25px;">
+                    <div class="made-with-badge">
+                        Made With Avinash_Sona <span class="heart-icon">❤️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <div class="lightbox-close" id="lightboxClose">&times;</div>
+            <img id="lightboxImage" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Firebase Configuration (Add your Firebase config here)
+        const firebaseConfig = {
+            apiKey: "your-api-key-here",
+            authDomain: "your-project.firebaseapp.com",
+            projectId: "your-project-id",
+            storageBucket: "your-project.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "your-app-id"
+        };
+
+        // Initialize Firebase (uncomment when config is added)
+        // import { initializeApp } from 'firebase/app';
+        // import { getFirestore } from 'firebase/firestore';
+        // import { getStorage } from 'firebase/storage';
+        // const app = initializeApp(firebaseConfig);
+        // const db = getFirestore(app);
+        // const storage = getStorage(app);
+
+        // Portfolio data
+        const portfolioData = [
+            {
+                id: 1,
+                title: "Wedding Ceremony",
+                category: "wedding",
+                imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                description: "Beautiful wedding ceremony photography"
+            },
+            {
+                id: 2,
+                title: "Professional Portrait",
+                category: "portrait",
+                imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                description: "Professional business portrait session"
+            },
+            {
+                id: 3,
+                title: "Wedding Reception",
+                category: "wedding",
+                imageUrl: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                description: "Wedding reception celebration"
+            },
+            {
+                id: 4,
+                title: "Corporate Event",
+                category: "event",
+                imageUrl: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                description: "Corporate event photography"
+            },
+            {
+                id: 5,
+                title: "Studio Portrait",
+                category: "portrait",
+                imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                description: "Professional studio portrait"
+            },
+            {
+                id: 6,
+                title: "Product Photography",
+                category: "commercial",
+                imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                description: "Commercial product photography"
+            }
+        ];
+
+        // Portfolio functionality
+        let currentFilter = 'all';
+
+        function renderPortfolio() {
+            const grid = document.getElementById('portfolioGrid');
+            const filteredItems = currentFilter === 'all' 
+                ? portfolioData 
+                : portfolioData.filter(item => item.category === currentFilter);
+
+            grid.innerHTML = filteredItems.map(item => `
+                <div class="portfolio-item" data-category="${item.category}" onclick="openLightbox('${item.imageUrl}', '${item.title}')">
+                    <img src="${item.imageUrl}" alt="${item.title}" />
+                    <div class="portfolio-overlay">
+                        <i data-lucide="search" width="32" height="32" style="color: #FFD700;"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>${item.title}</h3>
+                        <p style="color: #FFD700; text-transform: capitalize;">${item.category} Photography</p>
+                    </div>
+                </div>
+            `).join('');
+            
+            lucide.createIcons();
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                renderPortfolio();
+            });
+        });
+
+        // Lightbox functionality
+        function openLightbox(imageUrl, title) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = imageUrl;
+            lightboxImage.alt = title;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeLightbox();
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Initialize portfolio on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPortfolio();
+        });
+
+        // Handle escape key for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
